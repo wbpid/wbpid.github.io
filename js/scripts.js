@@ -108,8 +108,7 @@ const RUN = {
         if($(this).html().trim() == '') (adsbygoogle = window.adsbygoogle || []).push({});
       });
       setTimeout(()=>{
-        if(a.eq(0).html().trim() == '') $('#notif').show();
-        else $('#notif').remove();
+        (a.eq(0).html().trim() == '')? $('#notif').show() : $('#notif').remove();
       }, 1000);
     }
   },
