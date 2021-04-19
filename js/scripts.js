@@ -102,12 +102,9 @@ const RESULT = {
 
 const RUN = {
   ads: ()=>{
-    const a = $('ins.adsbygoogle');
-    if(a.length > 0){
-      setTimeout(()=>{
-        (a.eq(0).html().trim() == '')? $('#notif').show() : $('#notif').remove();
-      }, 1000);
-    }
+    setTimeout(()=>{
+      (!adsbygoogle || $('ins.adsbygoogle').eq(0).html().trim() == '')? $('#notif').show() : $('#notif').remove();
+    }, 1000);
   },
   asideFeed: ()=>{
     switch(+$('#aside-type').val()){
