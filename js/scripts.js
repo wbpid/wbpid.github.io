@@ -103,8 +103,15 @@ const RESULT = {
 const RUN = {
   ads: ()=>{
     if(adsbygoogle && adsbygoogle.length > 0){
+      const a = $('ins.adsbygoogle');
       setTimeout(()=>{
-        ($('ins.adsbygoogle').eq(0).html().trim() == '')? $('#notif').show() : $('#notif').remove();
+        if(a.eq(0).html().trim() == '') $('#notif').show();
+        else {
+          $('#notif').remove();
+          a.each(function(){
+            if($(this).height() == 0) $(this).parent().remove();
+          });
+        }
       }, 1000);
     }
   },
