@@ -101,11 +101,6 @@ const RESULT = {
 };
 
 const RUN = {
-  ads: ()=>{
-    setTimeout(()=>{
-      (typeof(adsbygoogle) == 'undefined' || $('ins.adsbygoogle').eq(0).html().trim() == '')? $('#notif').show() : $('#notif').remove();
-    }, 1000);
-  },
   asideFeed: ()=>{
     switch(+$('#aside-type').val()){
       case 1:
@@ -201,7 +196,6 @@ const RUN = {
   jumpTo: x =>{$('#body').animate({scrollTop:x}, 800)}
 };
 
-RUN.ads();
 RUN.asideFeed();
 RUN.domContent();
 RUN.bindEvent();
