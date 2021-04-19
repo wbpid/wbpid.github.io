@@ -102,13 +102,9 @@ const RESULT = {
 
 const RUN = {
   ads: ()=>{
-    const a = $('ins.adsbygoogle');
-    if(a.length > 0){
-      a.each(function(){
-        if($(this).html().trim() == '') (adsbygoogle = window.adsbygoogle || []).push({});
-      });
+    if(adsbygoogle && adsbygoogle.length > 0){
       setTimeout(()=>{
-        (a.eq(0).html().trim() == '')? $('#notif').show() : $('#notif').remove();
+        ($('ins.adsbygoogle').eq(0).html().trim() == '')? $('#notif').show() : $('#notif').remove();
       }, 1000);
     }
   },
