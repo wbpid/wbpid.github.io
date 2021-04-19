@@ -103,7 +103,7 @@ const RESULT = {
 const RUN = {
   ads: ()=>{
     setTimeout(()=>{
-      (!adsbygoogle || $('ins.adsbygoogle').eq(0).html().trim() == '')? $('#notif').show() : $('#notif').remove();
+      (typeof(adsbygoogle) == 'undefined' || $('ins.adsbygoogle').eq(0).html().trim() == '')? $('#notif').show() : $('#notif').remove();
     }, 1000);
   },
   asideFeed: ()=>{
