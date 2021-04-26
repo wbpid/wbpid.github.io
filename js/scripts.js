@@ -120,7 +120,6 @@ const RUN = {
     $('.copyright-year').text(d.getFullYear());
   },
   bindEvent: ()=>{
-    if(!ENV.devMode) $('body').on('contextmenu', APP.preventDefault);
     const a = $('.a-slide');
     if(a.length > 0){
       $('#body').scroll(function(){
