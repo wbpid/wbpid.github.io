@@ -17,7 +17,7 @@
         [0,1,2].forEach(i =>{
           if(c.eq(i).text()) $(w.document).find('#x-editor textarea').eq(i).val(c.eq(i).text());
         });
-        $(w.document).find('#x-frame').attr('srcdoc', ('<style>'+ c.eq(1).text() +'</style>'+ c.eq(0).text() +'<script>'+ c.eq(2).text() +'</script>'));
+        $(w.document).find('#x-frame').attr('srcdoc', ('<!DOCTYPE html><html><head><base href="'+ ENV.repoUrl +'/"/><style>'+ c.eq(1).text() +'</style></head><body>'+ c.eq(0).text() +'<script>'+ c.eq(2).text() +'</script></body></html>'));
       });
     }
   });
