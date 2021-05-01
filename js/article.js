@@ -14,10 +14,10 @@
     } else {
       const w = window.open('/p/code-editor.html');
       $(w).on('load', ()=>{
-        [0,1,2].forEach(i =>{
-          if(c.eq(i).text()) $(w.document).find('#x-editor textarea').eq(i).val(c.eq(i).text());
+        [0,1,2].forEach((n, d)=>{
+          d = c.eq(n).text();
+          if(d) $(w.document).find('#x-editor textarea').eq(n).val(d);
         });
-        $(w.document).find('#x-frame').attr('srcdoc', ('<!DOCTYPE html><html><head><base href="'+ ENV.repoUrl +'/"/><style>'+ c.eq(1).text() +'</style></head><body>'+ c.eq(0).text() +'<script>'+ c.eq(2).text() +'</script></body></html>'));
       });
     }
   });
