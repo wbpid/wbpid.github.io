@@ -7,7 +7,7 @@ const codeEditor = ()=>{
 };
 
 window.addEventListener('load', ()=>{
-  setTimeout(codeEditor, 100);
+  setTimeout(codeEditor, 500);
   const b = $('.x-btn');
   const t = $('#x-editor textarea');
   b.click(function(){
