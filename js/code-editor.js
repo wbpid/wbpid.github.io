@@ -1,6 +1,6 @@
 const codeEditor = ()=>{
   const t = $('#x-editor textarea');
-  $('#x-frame').attr('srcdoc', ('<style>'+ t.eq(1).val() +'</style>'+ t.eq(0).val() +'<script>'+ t.eq(2).val() +'</script>'));
+  $('#x-frame').attr('srcdoc', ('<!DOCTYPE html><html><head><base href="'+ ENV.repoUrl +'/"/><style>'+ t.eq(1).val() +'</style></head><body>'+ t.eq(0).val() +'<script>'+ t.eq(2).val() +'</script></body></html>'));
 };
 
 (()=>{
