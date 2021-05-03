@@ -17,6 +17,7 @@ const SLIDE = {
 };
 
 $(document).ready(()=>{
+  $('.slide').show();
   const a = $('.a-slide');
   $('#body').scroll(function(){
     if(a.length > 0){
