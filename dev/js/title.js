@@ -1,10 +1,15 @@
+function scrollTitle(x){
+  scrollTop(x);
+  $('#title-nav').hide();
+}
+
 window.addEventListener('load', ()=>{
   if($('h1 div').length > 0){
     let x1, x2, n = '';
     $('h1 div').each(function(){
       x1 = $(this).offset().top;
       x2 = (window.innerWidth > 600)? 150 : 80;
-      n += '<button onclick="scrollTop('+ Math.round(x1 - x2) +'); $(\'#title-nav\').hide()" class="w3-bar-item w3-hover-light-gray w3-button">'+ $(this).text() +'</button>';
+      n += '<button onclick="scrollTitle('+ Math.round(x1 - x2) +')" class="w3-bar-item w3-hover-light-gray w3-button">'+ $(this).text() +'</button>';
     });
     $('#title-nav nav').html(n);
   }
