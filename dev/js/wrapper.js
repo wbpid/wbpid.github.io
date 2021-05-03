@@ -1,7 +1,3 @@
-function scrollTop(x){
-  $('#body').animate({scrollTop:x}, 800);
-}
-
 const RESULT = {
   feed: d =>{
     const e = d.feed.entry.sort(()=> Math.random()-0.5).slice(0,5);
