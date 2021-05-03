@@ -56,7 +56,7 @@ $(document).ready(()=>{
   let t = '';
   TESTI.sort(()=> Math.random()-0.5).slice(0,5).forEach(d =>{
     t += '<td class="w3-container">'+
-            '<p><picture class="thumbnail"><img class="responsive-img w3-circle w3-card" data-src="'+ d.img +'"/></picture></p>'+
+            '<p><picture class="thumbnail"><img class="responsive-img w3-circle w3-card" src="'+ d.img +'"/></picture></p>'+
             '<p>'+
               '<b class="w3-large w3-text-dark-gray">'+ d.name +'</b><br/>'+
               '<span class="w3-small w3-text-gray">'+ d.city +'</span>'+
