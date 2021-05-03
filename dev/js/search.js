@@ -31,7 +31,7 @@ RESULT.load = ()=>{
   const p = $('#search-pages span');
   p.eq(0).text(RESULT.page);
   p.eq(1).text(RESULT.pages());
-  scrollTop(0);
+  $('#body').animate({scrollTop:0}, 800);
 };
 
 $(document).ready(()=>{
