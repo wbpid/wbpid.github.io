@@ -15,5 +15,5 @@ window.addEventListener('load', ()=>{
       $('#title-nav nav').html(n);
     }
     else $('#title-nav, .title-nav').remove();
-  }, 30);
+  }, 40);
 });
