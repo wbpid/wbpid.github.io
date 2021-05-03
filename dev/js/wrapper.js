@@ -14,7 +14,7 @@ const RESULT = {
               '<tr>'+
                 '<td rowspan="2" style="vertical-align:top">'+
                   '<picture class="thumbnail w3-card-2 w3-margin-right">'+
-                    '<img src="'+ d.media$thumbnail.url +'" class="reponsive-img"/>'+
+                    '<img width="0" height="0" src="'+ d.media$thumbnail.url +'" class="reponsive-img"/>'+
                   '</picture>'+
                 '</td>'+
                 '<td>'+
