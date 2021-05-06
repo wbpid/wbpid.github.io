@@ -477,6 +477,16 @@ const MENU = {
         ]
       }
     ]
+  },
+  d: {
+    title: 'Halaman',
+    pages: [
+      {
+        id: 1,
+        title: 'Code Editor',
+        link: '/p/code-editor.html'
+      }
+    ]
   }
 };
 
